@@ -7,7 +7,6 @@ body {
   width: 100%;
   height: 100vh;
   background-color: rgba(104, 102, 102, 0.1);
-  background-image: url("../img/winter.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   /* filter: brightness(0.4);*/ }
@@ -31,7 +30,6 @@ body {
 
 .information {
   height: 100vh;
-  background-image: url("../img/laptop.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
@@ -111,7 +109,8 @@ a.list-group-item:hover {
 .form-input input:focus {
   outline: none; }
 
-.input-text:focus, .input-text:hover {
+.input-text:focus,
+.input-text:hover {
   border: 2px solid #000000; }
 
 .contact-me .fa-lg {
@@ -128,5 +127,8 @@ a.list-group-item:hover {
 .contact-me p {
   margin-bottom: 10%;
   padding-top: 10px; }
+
+.fa-laptop {
+  font-size: 30px; }
 
 /*# sourceMappingURL=app.css.map */

@@ -2,25 +2,25 @@ import React, { Component } from 'react';
 import { connect } from "redux-zero/react";
 import {
     BrowserRouter,
-    Redirect,
-    NavLink,
+    // Redirect,
+    // NavLink,
     Route,
     Switch} from 'react-router-dom';
 // import './styles/App.css';
-import {Home, Information, NavBar} from './Home';
+import {Home} from './Home';
 // import {About} from './About';
 // import {Portfolio} from './Portfolio';
 // import {Habilities} from './Habilities';
 // import {Contact} from './Contact';
 // import {ModalSpotify} from './ModalSpotify';
 // import {Resume} from './Resume';
-const App = ({biografy, selected, show, sharedProps}) => {
+const App = ({items}) => {
 return (
      <div className="container-fluid">
         <BrowserRouter>
             <Switch>
-                    <Route exact path="/" render={() => <Home />}/>
-                    <Route path="/home" render={() => <Home  />}/>
+                    <Route exact path="/" render={() => <Home items={items} />}/>
+                    <Route path="/home" render={() => <Home items={items} />}/>
                     {/* <Route path="/about" render={() => <About NavBar={NavBar} Information={Information}  />}/>
                     <Route path="/portfolio"  render={() => <Portfolio NavBar={NavBar} Information={Information} ModalSpotify={ModalSpotify} show={show} sharedProps={sharedProps} />}/>
                     <Route path="/habilities"  render={() => <Habilities NavBar={NavBar} Information={Information} />}/>
@@ -32,6 +32,6 @@ return (
     </div>
 )
 }
-const mapToProps = ({biografy, selected, show, sharedProps}) => ({biografy, selected, show});
+const mapToProps = ({items}) => ({items});
 
 export default connect(mapToProps)(App);
