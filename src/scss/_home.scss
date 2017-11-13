@@ -1,0 +1,73 @@
+.remove-left {
+    padding-left: 0;
+}
+
+.remove-right {
+    padding-right: 0;
+}
+
+.nav-bar {
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.nav-bar,
+.information {
+    padding: 0;
+    height: 100vh;
+}
+
+.information {
+    // background: rgba(230, 229, 225, 0.9);
+    height: 100vh;
+    background-image: url('../img/laptop.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.list-group-item {
+    height: 20vh;
+    color: rgb(167, 162, 162);
+    background: none;
+    width: calc(100% + 1px);
+    cursor: pointer;
+}
+
+a.list-group-item:focus,
+a.list-group-item:hover,
+{
+    /* color: #555; */
+    color: white;
+    text-decoration: none;
+    background-color: #2b669a;
+}
+
+.list-group-item.active,
+.list-group-item.active:hover {
+    text-shadow: 0 -1px 0 #2b669a;
+    background-image: -webkit-linear-gradient(top, #337ab7 0, #2b669a 100%);
+    background-image: -o-linear-gradient(top, #337ab7 0, #2b669a 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#337ab7), to(#2b669a));
+    background-image: linear-gradient(to bottom, #337ab7 0, #2b669a 100%);
+    background-repeat: repeat-x;
+    border-color: #2b669a;
+}
+
+.fa-home,
+.fa-briefcase,
+.fa-envelope,
+.glyphicon-user,
+.fa-magic {
+    font-size: 40px;
+}
+
+.fa-circle {
+    color: grey;
+}
+
+.information .fa-circle:hover {
+    color: white;
+}

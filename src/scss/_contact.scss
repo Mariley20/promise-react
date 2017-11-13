@@ -1,0 +1,70 @@
+@import '_variables';
+.form-group {
+    margin: 0;
+}
+
+.form-input,
+.contact-me {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.line-vertical {
+    width: 1px;
+    height: 10vh;
+    background: $background;
+}
+
+.form-input .input-group {
+    width: 100%;
+}
+
+.form-input input,
+.form-input textarea {
+    border-radius: 3px;
+    width: calc(100% + 1px);
+    margin-top: 6px;
+    margin-bottom: 5.1%;
+    border: 1px solid rgb(167, 162, 162);
+    padding: 10px;
+    letter-spacing: 1px;
+    transition: all 300ms linear;
+}
+
+.form-input input {
+    height: 6.7vh;
+}
+
+.form-input textarea {
+    height: 17vh;
+}
+
+.form-input input:focus {
+    outline: none;
+}
+
+.input-text:focus,
+.input-text:hover {
+    border: 2px solid #000000;
+}
+
+.contact-me .fa-lg {
+    font-size: 3.333333em;
+    color: white;
+}
+
+.contact-me span {
+    padding-bottom: 10%;
+}
+
+.contact-me .fa-circle {
+    font-size: 14vh;
+    font-weight: 100px;
+}
+
+.contact-me p {
+    margin-bottom: 10%;
+    padding-top: 10px;
+}

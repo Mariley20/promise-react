@@ -1,0 +1,132 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(104, 102, 102, 0.1);
+  background-image: url("../img/winter.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* filter: brightness(0.4);*/ }
+
+.remove-left {
+  padding-left: 0; }
+
+.remove-right {
+  padding-right: 0; }
+
+.nav-bar {
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+.nav-bar,
+.information {
+  padding: 0;
+  height: 100vh; }
+
+.information {
+  height: 100vh;
+  background-image: url("../img/laptop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.list-group-item {
+  height: 20vh;
+  color: #a7a2a2;
+  background: none;
+  width: calc(100% + 1px);
+  cursor: pointer; }
+
+a.list-group-item:focus,
+a.list-group-item:hover {
+  /* color: #555; */
+  color: white;
+  text-decoration: none;
+  background-color: #2b669a; }
+
+.list-group-item.active,
+.list-group-item.active:hover {
+  text-shadow: 0 -1px 0 #2b669a;
+  background-image: -webkit-linear-gradient(top, #337ab7 0, #2b669a 100%);
+  background-image: -o-linear-gradient(top, #337ab7 0, #2b669a 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#337ab7), to(#2b669a));
+  background-image: linear-gradient(to bottom, #337ab7 0, #2b669a 100%);
+  background-repeat: repeat-x;
+  border-color: #2b669a; }
+
+.fa-home,
+.fa-briefcase,
+.fa-envelope,
+.glyphicon-user,
+.fa-magic {
+  font-size: 40px; }
+
+.fa-circle {
+  color: grey; }
+
+.information .fa-circle:hover {
+  color: white; }
+
+.form-group {
+  margin: 0; }
+
+.form-input,
+.contact-me {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.line-vertical {
+  width: 1px;
+  height: 10vh;
+  background: #a7a2a2; }
+
+.form-input .input-group {
+  width: 100%; }
+
+.form-input input,
+.form-input textarea {
+  border-radius: 3px;
+  width: calc(100% + 1px);
+  margin-top: 6px;
+  margin-bottom: 5.1%;
+  border: 1px solid #a7a2a2;
+  padding: 10px;
+  letter-spacing: 1px;
+  transition: all 300ms linear; }
+
+.form-input input {
+  height: 6.7vh; }
+
+.form-input textarea {
+  height: 17vh; }
+
+.form-input input:focus {
+  outline: none; }
+
+.input-text:focus, .input-text:hover {
+  border: 2px solid #000000; }
+
+.contact-me .fa-lg {
+  font-size: 3.333333em;
+  color: white; }
+
+.contact-me span {
+  padding-bottom: 10%; }
+
+.contact-me .fa-circle {
+  font-size: 14vh;
+  font-weight: 100px; }
+
+.contact-me p {
+  margin-bottom: 10%;
+  padding-top: 10px; }
+
+/*# sourceMappingURL=app.css.map */
