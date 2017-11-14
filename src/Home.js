@@ -5,7 +5,7 @@ import {search, search2 } from './actions';
 export const Home = ({items}) => {
     const itemsss = items.map((element, index) => {
         return(
-            <p key={index} onClick={() => search2(index, element)}  >{element}</p>
+            <p key={index}  >{element}</p>
         )
     })
 return (

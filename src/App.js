@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "redux-zero/react";
 import {
     BrowserRouter,
-    // Redirect,
+    Redirect,
     // NavLink,
     Route,
     Switch} from 'react-router-dom';
@@ -14,7 +14,7 @@ import {Home} from './Home';
 // import {Contact} from './Contact';
 // import {ModalSpotify} from './ModalSpotify';
 // import {Resume} from './Resume';
-const App = ({items}) => {
+const App = ({items, planets}) => {
 return (
      <div className="container-fluid">
         <BrowserRouter>
@@ -24,14 +24,14 @@ return (
                     {/* <Route path="/about" render={() => <About NavBar={NavBar} Information={Information}  />}/>
                     <Route path="/portfolio"  render={() => <Portfolio NavBar={NavBar} Information={Information} ModalSpotify={ModalSpotify} show={show} sharedProps={sharedProps} />}/>
                     <Route path="/habilities"  render={() => <Habilities NavBar={NavBar} Information={Information} />}/>
-                    <Route path = "/contact" render = { () => <Contact NavBar={NavBar} Information={Information}/>} />
-                    <Route path='/portfolio' render={() => <Redirect to="/home"/>}/> */}
+                    <Route path = "/contact" render = { () => <Contact NavBar={NavBar} Information={Information}/>} /> */}
+                    <Route path='/promise-react' render={() => <Redirect to="/home"/>}/> 
                     {/* <Route path="/resume"  render={() => <Resume biografy={biografy} selected={selected} />}/> */}
             </Switch>
         </BrowserRouter>
     </div>
 )
 }
-const mapToProps = ({items}) => ({items});
+const mapToProps = ({items, planets}) => ({items, planets});
 
 export default connect(mapToProps)(App);
