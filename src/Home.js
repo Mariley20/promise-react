@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
 // import { NavLink } from 'react-router-dom';
 import './css/app.css';
-import {search, getJSON } from './actions';
+import {search, search2 } from './actions';
 export const Home = ({items}) => {
+    const itemsss = items.map((element, index) => {
+        return(
+            <p key={index} onClick={() => search2(index, element)}  >{element}</p>
+        )
+    })
 return (
     <div>
         <input type='text' />
         <button onClick={search}>Buscar</button>
+        <div>
+            {itemsss}
+        </div>
     </div>
 )
 }

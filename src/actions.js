@@ -1,41 +1,29 @@
 import store from "./store";
-import url from './data/earth-like-results.json'
+// import url from './data/earth-like-results.json'
 
-// export const de = () => {
-//     get
-// }
-export const getJSON = (url) => {
-    console.log('url', url)
-    return new Promise(function(resolver, error) {
-        let ajax = new XMLHttpRequest();
-        ajax.open('GET', url)
-        ajax.send()
-        ajax.onreadystatechange = function() {
-            if (ajax.readyState === 4) {
-                let response = JSON.parse(ajax.responseText)
-                resolver(response)
-            }
-        }
-    })
+export async function search() {
+    const url = "data/earth-like-results.json";
+    fetch(url)
+        .then(res => res.json())
+        .then(res => {
+            console.log('res', res)
+            store.setState({
+                items: res.results
+            })
+        });
+    console.log('items', store.getState().items)
+
 }
-export async function search(text) {
-    console.log(url, 'url')
-        // fetch(url)
-        //     .then(res => {
-        //         store.setState({
-        //             items: res
-        //         });
-        // const res = await fetch (url);
-        // store.setState({
-        //     items : res
-        // })
-        //     })
-        // console.log(store.getState().items)
-    getJSON(url)
-        .then(function(response) {
-            return getJSON(response.results[0])
-        })
-        .then(function(responsePlanet) {
-            console.log(responsePlanet)
-        })
+export async function search2(index, url) {
+
+    console.log('url2', url, 'index', index)
+    fetch(url)
+        .then(res => res.json())
+        .then(res => {
+            console.log('res', res)
+            store.setState({
+                index: res
+            })
+        });
+
 }
