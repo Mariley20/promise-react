@@ -19,8 +19,8 @@ return (
      <div className="container-fluid">
         <BrowserRouter>
             <Switch>
-                    <Route exact path="/" render={() => <Home items={items} />}/>
-                    <Route path="/home" render={() => <Home items={items} />}/>
+                    <Route exact path="/" render={() => <Home items={items} planets={planets}/>}/>
+                    <Route path="/home" render={() => <Home items={items} planets={planets}/>}/>
                     {/* <Route path="/about" render={() => <About NavBar={NavBar} Information={Information}  />}/>
                     <Route path="/portfolio"  render={() => <Portfolio NavBar={NavBar} Information={Information} ModalSpotify={ModalSpotify} show={show} sharedProps={sharedProps} />}/>
                     <Route path="/habilities"  render={() => <Habilities NavBar={NavBar} Information={Information} />}/>
